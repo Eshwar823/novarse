@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="services-hero">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <p class="section-kicker">Services</p>
+        <h1 class="display-4 hero__title">Services built for real-world operations.</h1>
+        <p class="lead hero__lead">We design delivery programs for teams that cannot afford downtime. Every engagement is anchored in visibility, compliance, and velocity.</p>
+        <div class="hero__actions">
+          <a href="{{ url_for('contact') }}" class="btn btn-primary">Plan a service roadmap</a>
+          <a href="#service-list" class="btn btn-outline-primary">Browse services</a>
+        </div>
+        <div class="hero__highlights mt-3">
+          <span class="pill">Discovery in 10 days</span>
+          <span class="pill">Dedicated delivery pods</span>
+          <span class="pill">Operational support</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="services-hero__panel">
+          <img src="{{ url_for('static', filename='images/hero.png') }}" class="services-hero__image" alt="Novarse services overview">
+          <div class="mt-4">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="insight-card">
+                  <h5 class="mb-1">99% delivery</h5>
+                  <p class="text-muted mb-0">Milestone completion for active programs.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="insight-card">
+                  <h5 class="mb-1">4.9 client score</h5>
+                  <p class="text-muted mb-0">Measured across strategic engagements.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="insight-card">
+                  <h5 class="mb-1">70% repeat</h5>
+                  <p class="text-muted mb-0">Multi-quarter expansions.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="insight-card">
+                  <h5 class="mb-1">24/7 coverage</h5>
+                  <p class="text-muted mb-0">Support for critical workflows.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="service-list">
+  <div class="container">
+    <div class="row align-items-end g-4 mb-4">
+      <div class="col-lg-8">
+        <p class="section-kicker">Service Portfolio</p>
+        <h2 class="section-title">Focused solutions for high-impact industries.</h2>
+        <p class="text-muted">Each service line includes strategy, delivery, and continuous improvement support.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-primary">Request a service audit</a>
+      </div>
+    </div>
+    <div class="services-list">
+      {% for category in categories %}
+      <div class="service-row">
+        <img src="{{ url_for('static', filename='images/' + category.image) }}" class="service-thumb" alt="{{ category.title }}">
+        <div>
+          <h4>{{ category.title }}</h4>
+          <p class="text-muted mb-2">{{ category.long_desc }}</p>
+          <div class="service-meta mb-3">
+            <span>Strategy</span>
+            <span>Delivery</span>
+            <span>Support</span>
+          </div>
+          <div class="service-actions">
+            <a href="{{ url_for('service_detail', slug=category.slug) }}" class="btn btn-outline-primary">View details</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-secondary">Discuss this service</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-kicker">Delivery Model</p>
+      <h2 class="section-title">A delivery model that scales with your team.</h2>
+      <p class="text-muted">Clarity, cadence, and measurable outcomes from week one.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="step-card">
+          <h4 class="section-title">Discover</h4>
+          <p>Rapid audits, stakeholder interviews, and data mapping to prioritize quick wins.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card">
+          <h4 class="section-title">Build</h4>
+          <p>Dedicated pods that deliver platforms, integrations, and automation with speed.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card">
+          <h4 class="section-title">Scale</h4>
+          <p>Operational support, training, and continuous optimization after launch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="content-card">
+          <p class="section-kicker">Engagements</p>
+          <h3 class="section-title">Flexible engagement models.</h3>
+          <p>Choose project-based delivery, long-term managed support, or embedded pods that align to your internal teams.</p>
+          <ul class="values-list mb-0">
+            <li>Discovery sprint + roadmap</li>
+            <li>Delivery pod with weekly demos</li>
+            <li>Managed support with KPI reporting</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="content-card">
+          <p class="section-kicker">Capabilities</p>
+          <h3 class="section-title">Integrated delivery stack.</h3>
+          <p>We align data, operations, and experience layers so teams can move fast without sacrificing compliance.</p>
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="info-tile">Data platforms</div>
+            </div>
+            <div class="col-6">
+              <div class="info-tile">Automation</div>
+            </div>
+            <div class="col-6">
+              <div class="info-tile">Cloud security</div>
+            </div>
+            <div class="col-6">
+              <div class="info-tile">Analytics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

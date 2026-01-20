@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Novarse logo">
+  <rect width="120" height="120" rx="28" fill="#0b6b6b"/>
+  <circle cx="38" cy="38" r="16" fill="#f28f3b"/>
+  <rect x="58" y="32" width="34" height="12" rx="6" fill="#f7f4ee"/>
+  <rect x="26" y="66" width="66" height="12" rx="6" fill="#1b4b6b"/>
+  <rect x="26" y="86" width="48" height="10" rx="5" fill="#f7f4ee" opacity="0.9"/>
+</svg>

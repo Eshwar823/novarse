@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="section-kicker">Contact</p>
+    <h1 class="page-hero__title">Tell us what you want to build.</h1>
+    <p class="page-hero__lead">Share a few details and we will connect you with the right team.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="contact-panel">
+          {% if success %}
+          <div class="alert alert-success">Thank you for your message! We'll get back to you soon.</div>
+          {% endif %}
+          <form method="post" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name*</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email*</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" id="phone" name="phone">
+              </div>
+              <div class="col-md-6">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject">
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-4">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="contact-panel">
+          <h3 class="section-title">Why teams choose us</h3>
+          <p class="text-muted">We align strategy, delivery, and support so your teams spend less time on workarounds.</p>
+          <div class="info-tile mt-4">
+            <h5>Consulting</h5>
+            <p class="mb-0">Rapid discovery, technical audits, and transformation roadmaps.</p>
+          </div>
+          <div class="info-tile mt-3">
+            <h5>Delivery</h5>
+            <p class="mb-0">Dedicated pods for platform builds, data pipelines, and automation.</p>
+          </div>
+          <div class="info-tile mt-3">
+            <h5>Support</h5>
+            <p class="mb-0">Ongoing optimization and operational resilience planning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-kicker">Office Locations</p>
+      <h2 class="section-title">Connect with Novarse worldwide.</h2>
+      <p class="text-muted">Reach out to the office closest to you or send a message for routing.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="content-card h-100">
+          <h4 class="section-title">Plano, TX</h4>
+          <p class="text-muted mb-3">3400 Silverstone Dr<br>Plano, TX 75023, USA</p>
+          <div class="info-tile">
+            <p class="mb-1"><strong>Send a message</strong><br>info@novarsetech.com</p>
+            <p class="mb-1"><strong>Call us directly</strong><br>+1-510-309-8600</p>
+            <p class="mb-0"><strong>Join our team</strong><br>careers@novarse.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="content-card h-100">
+          <h4 class="section-title">Preston, UK</h4>
+          <p class="text-muted mb-3">36 Plungington Rd<br>Preston PR1 7RB, UK</p>
+          <div class="info-tile">
+            <p class="mb-1"><strong>Send a message</strong><br>info@novarsetech.com</p>
+            <p class="mb-1"><strong>Call us directly</strong><br>+1-510-309-8600</p>
+            <p class="mb-0"><strong>Join our team</strong><br>careers@novarse.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="content-card h-100">
+          <h4 class="section-title">Vancouver, Canada</h4>
+          <p class="text-muted mb-3">4508 Fraser St<br>Vancouver, BC, Canada V5V 4G</p>
+          <div class="info-tile">
+            <p class="mb-1"><strong>Send a message</strong><br>info@novarsetech.com</p>
+            <p class="mb-1"><strong>Call us directly</strong><br>+1-510-309-8600</p>
+            <p class="mb-0"><strong>Join our team</strong><br>careers@novarse.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="content-card h-100">
+          <h4 class="section-title">Mansoorabad, India</h4>
+          <p class="text-muted mb-3">3rd Floor, Beside Kamineni Hospital Lane,<br>Laxmi Nagar Colony, Mansoorabad, India - 500068</p>
+          <div class="info-tile">
+            <p class="mb-1"><strong>Send a message</strong><br>info@novarsetech.com</p>
+            <p class="mb-1"><strong>Call us directly</strong><br>+1-510-309-8600</p>
+            <p class="mb-0"><strong>Join our team</strong><br>careers@novarse.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

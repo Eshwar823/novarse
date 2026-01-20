@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container text-center">
+    <p class="section-kicker">404</p>
+    <h1 class="page-hero__title">This page is off the map.</h1>
+    <p class="page-hero__lead mx-auto">{{ message or 'The page you are looking for could not be found.' }}</p>
+    <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Return Home</a>
+  </div>
+</section>
+{% endblock %}

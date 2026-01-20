@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="career-hero">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <span class="career-tag">Careers at Novarse</span>
+        <h1 class="display-4 hero__title mt-3">Build systems people trust.</h1>
+        <p class="lead hero__lead">We are a high-velocity team designing dependable platforms for regulated industries. If you love clarity, impact, and ownership, you will fit right in.</p>
+        <div class="hero__actions">
+          <a href="#open-roles" class="btn btn-primary">View Open Roles</a>
+          <a href="{{ url_for('contact') }}" class="btn btn-outline-primary">Send Your Resume</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="career-panel">
+          <div class="row g-3 career-stats">
+            <div class="career-stat">
+              <h3 class="section-title mb-1">4 time zones</h3>
+              <p class="text-muted mb-0">Distributed teams with tight collaboration.</p>
+            </div>
+            <div class="career-stat">
+              <h3 class="section-title mb-1">12-week impact</h3>
+              <p class="text-muted mb-0">Most projects ship a measurable result.</p>
+            </div>
+            <div class="career-stat">
+              <h3 class="section-title mb-1">Client visibility</h3>
+              <p class="text-muted mb-0">Your work shows up in real outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="section-title">How we hire</h2>
+        <p class="text-muted">A simple, fast process that respects your time.</p>
+        <div class="career-steps">
+          <div class="career-step">
+            <h5 class="mb-1">1. Intro call</h5>
+            <p class="mb-0 text-muted">Meet the team and align on role expectations.</p>
+          </div>
+          <div class="career-step">
+            <h5 class="mb-1">2. Skills interview</h5>
+            <p class="mb-0 text-muted">Discuss real problems and your approach.</p>
+          </div>
+          <div class="career-step">
+            <h5 class="mb-1">3. Offer and onboarding</h5>
+            <p class="mb-0 text-muted">Transparent compensation and fast start.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="benefit-grid">
+          <div class="benefit-card">
+            <h5>Ownership</h5>
+            <p class="text-muted mb-0">Own milestones, lead decisions, and ship outcomes.</p>
+          </div>
+          <div class="benefit-card">
+            <h5>Growth</h5>
+            <p class="text-muted mb-0">Learning budgets, certifications, and mentorship.</p>
+          </div>
+          <div class="benefit-card">
+            <h5>Balance</h5>
+            <p class="text-muted mb-0">Flexible schedules with clear expectations.</p>
+          </div>
+          <div class="benefit-card">
+            <h5>Benefits</h5>
+            <p class="text-muted mb-0">Competitive compensation and wellness support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="open-roles">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-kicker">Open Roles</p>
+      <h2 class="section-title">No open positions right now.</h2>
+      <p class="text-muted">We are always meeting talented people. Send your resume for future consideration.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="role-card text-center">
+          <h3>Future Opportunities</h3>
+          <p class="text-muted">Share your background and the type of role you are looking for. We will reach out when a matching opportunity opens.</p>
+          <div class="info-tile mt-3">
+            <strong>Contact:</strong> careers@novarse.com
+          </div>
+          <a href="{{ url_for('contact') }}" class="btn btn-primary mt-4">Send Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="culture-card">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-8">
+          <h2 class="section-title text-white">A culture built on clarity.</h2>
+          <p class="mb-0">We celebrate teams that ship, learn, and iterate quickly. If you like clear goals and accountability, you will thrive here.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="{{ url_for('contact') }}" class="btn btn-light">Start the conversation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
